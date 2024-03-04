@@ -1,6 +1,6 @@
 using Persistence;
 using Application;
-using Core.CrossCuttingConcerns.Exceptions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,7 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //if (app.Environment.IsProduction())
-app.ConfigureCustomExceptionMiddleware();
+//app.ConfigureCustomExceptionMiddleware();
 
 app.UseHttpsRedirection();
 
