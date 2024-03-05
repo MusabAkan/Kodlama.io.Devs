@@ -12,10 +12,7 @@ public class EfRepositoryBase<TEntity, TContext> : IAsyncRepository<TEntity>, IR
 {
     protected TContext Context { get; }
 
-    public EfRepositoryBase(TContext context)
-    {
-        Context = context;
-    }
+    public EfRepositoryBase(TContext context) => Context = context;
 
     public async Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> predicate)
     {
